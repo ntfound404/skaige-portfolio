@@ -1,6 +1,8 @@
 const projects = [
   {
     title: '自律星球｜习惯养成与行为激励平台',
+    status: 'App 内测 · 具备上线能力',
+    featured: true,
     description:
       '面向 C 端用户的习惯养成与行为激励平台，围绕目标设定、专注执行、行为校验、激励反馈和排行对标构建完整业务闭环。项目已完成 v1.0 核心功能并进入 App 内测阶段，具备上线能力。',
     role: '全栈工程师',
@@ -23,6 +25,9 @@ const projects = [
   },
   {
     title: '高校宿舍管理系统',
+    status: '管理端与移动端联调完成',
+    featured: true,
+    githubUrl: 'https://github.com/ntfound404/dormitory-management-system',
     description:
       '面向学校宿舍管理场景，提供用户与角色管理、学生档案管理、宿舍楼与寝室管理、公告发布、晚归考勤和移动端定位签到能力。系统采用前后端分离架构，支持管理员端管理和学生端自助操作。',
     role: '全栈工程师',
@@ -51,6 +56,7 @@ const projects = [
   },
   {
     title: 'ModelX 二手模型交易平台',
+    status: '核心交易与售后链路完成',
     description:
       '面向 C 端用户和平台运营方的二手模型交易平台，覆盖商品发布、在线交易、支付结算、退货售后、即时沟通和平台风控治理等核心场景，形成完整交易闭环与运营闭环。',
     role: '全栈工程师',
@@ -73,6 +79,7 @@ const projects = [
   },
   {
     title: '新概念英语 NCE 听力小程序',
+    status: '小程序核心功能完成',
     description:
       '面向《新概念英语》学习者，提供课文音频播放、LRC 逐句字幕、中英对照和全四册课程配置，支持微信小程序端使用，适合碎片化英语学习。',
     role: '前端 / 小程序开发',

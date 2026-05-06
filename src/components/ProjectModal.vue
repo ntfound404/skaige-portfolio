@@ -69,10 +69,14 @@ onBeforeUnmount(() => {
                 <p class="mt-4 text-base leading-8 text-slate-300">{{ project.description }}</p>
               </div>
 
-              <div class="mt-8 grid gap-4 sm:grid-cols-3">
+              <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                 <div class="rounded-lg border border-white/10 bg-white/[0.04] p-4">
                   <dt class="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">角色</dt>
                   <dd class="mt-2 text-sm font-semibold text-white">{{ project.role }}</dd>
+                </div>
+                <div class="rounded-lg border border-white/10 bg-white/[0.04] p-4">
+                  <dt class="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">项目状态</dt>
+                  <dd class="mt-2 text-sm font-semibold text-white">{{ project.status }}</dd>
                 </div>
                 <div class="rounded-lg border border-white/10 bg-white/[0.04] p-4">
                   <dt class="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">阶段</dt>

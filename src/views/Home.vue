@@ -1,10 +1,12 @@
 <script setup>
-import profile from "../data/profile";
-import skillCategories from "../data/skills";
+import profile from '../data/profile'
+import skillCategories from '../data/skills'
+
+const capabilityTags = ['全栈开发', '移动端应用', 'AI 辅助开发']
 
 const featuredSkills = skillCategories
   .flatMap((category) => category.skills)
-  .slice(0, 10);
+  .slice(0, 10)
 </script>
 
 <template>
@@ -25,6 +27,9 @@ const featuredSkills = skillCategories
       </h2>
       <p class="mt-7 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
         {{ profile.summary }}
+      </p>
+      <p class="mt-5 max-w-2xl text-base font-medium leading-8 text-blue-100/95 sm:text-lg">
+        我能够独立完成从需求分析、系统设计、前后端开发、接口联调到部署上线的完整流程。
       </p>
 
       <div class="mt-10 flex flex-col gap-3 sm:flex-row">
@@ -62,7 +67,18 @@ const featuredSkills = skillCategories
         >
       </div>
 
-      <div class="mt-6 grid grid-cols-2 gap-3">
+      <div class="mt-6 flex flex-wrap gap-2">
+        <span
+          v-for="tag in capabilityTags"
+          :key="tag"
+          class="rounded-lg border border-primary/35 bg-primary/15 px-3 py-1.5 text-xs font-semibold tracking-wide text-blue-100 ring-1 ring-primary/20"
+        >
+          {{ tag }}
+        </span>
+      </div>
+
+      <p class="mt-5 text-xs font-medium uppercase tracking-[0.2em] text-slate-500">常用技术</p>
+      <div class="mt-3 grid grid-cols-2 gap-3">
         <div
           v-for="skill in featuredSkills"
           :key="skill"

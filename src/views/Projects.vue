@@ -1,8 +1,12 @@
 <script setup>
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 import ProjectCard from '../components/ProjectCard.vue'
 import ProjectModal from '../components/ProjectModal.vue'
 import projects from '../data/projects'
+
+const displayProjects = computed(() =>
+  [...projects].sort((a, b) => Number(!!b.featured) - Number(!!a.featured)),
+)
 
 const selectedProject = ref(null)
 
@@ -27,8 +31,10 @@ const closeProject = () => {
 
     <div class="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
       <ProjectCard
-        v-for="project in projects"
+        v-for="project in displayProjects"
         :key="project.title"
+        class="min-w-0"
+        :class="{ 'xl:col-span-3': project.featured }"
         :project="project"
         @select="openProject"
       />

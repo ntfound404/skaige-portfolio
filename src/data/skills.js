@@ -45,7 +45,7 @@ const skillCategories = [
   },
   {
     title: 'AI 应用能力',
-    skills: ['Prompt Engineering', 'AI Agent 思维设计', 'RAG 基础', 'Cursor', 'ChatGPT', 'Dify', 'Coze'],
+    skills: ['提示词工程', 'AI Agent 思维设计', 'RAG 基础', 'Cursor', 'ChatGPT', 'Dify', 'Coze'],
     description:
       '能够使用 AI 工具参与需求拆解、接口设计、数据库建模、代码生成和问题排查，具备 AI 辅助开发和 AI 应用原型设计能力。',
   },
